@@ -4,7 +4,7 @@ import React from 'react'
 const AthleteInfo = () => {
   return (
     <View>
-      <Text>Tatagos</Text>
+      <Text>Kopal</Text>
     </View>
   )
 }
