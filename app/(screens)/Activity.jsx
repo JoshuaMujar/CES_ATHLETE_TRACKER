@@ -4,7 +4,7 @@ import React from "react";
 export default function Activity() {
   return (
     <View style={styles.container}>
-      <Text>Settings</Text>
+      <Text>Activity log</Text>
     </View>
   );
 }

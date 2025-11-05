@@ -6,17 +6,19 @@ import { usePathname } from "expo-router";
 
 import HomePage from "../(screens)/HomePage";
 import Calendar from "../(screens)/AthleteCalendar";
-import Settings from "../(screens)/Settings";
-import Stats from "../(screens)/Stats";
-import Attendance from "../(screens)/AthleteCalendar";
+import Activity from "../(screens)/Activity";
+import TrainingPlan from "../(screens)/TrainingPlan";
+import Attendance from "../(screens)/AthleteCalendar";  
 import AddAthlete from "../(athleteTabs)/AddAthlete";
+
+
+
 
 const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => {
   const [showModal, setShowModal] = useState(false);
   const pathname = usePathname();
-
   const fabAnimation = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -36,7 +38,7 @@ const AppNavigator = () => {
       <Tab.Navigator
         screenOptions={{
           headerShown: false,
-          tabBarShowLabel: true, // keep this true globally
+          tabBarShowLabel: true,
           tabBarStyle: styles.tabBar,
         }}
       >
@@ -74,26 +76,25 @@ const AppNavigator = () => {
           name="Attendance"
           component={Attendance}
           options={{
-            // 👇 Hide label only for this tab
-            tabBarLabel: ()  => null,
+            tabBarLabel: () => null,
             tabBarIcon: ({ focused }) => (
               <Ionicons
                 name={focused ? "clipboard" : "clipboard-outline"}
                 size={26}
-                color={focused ? "#ffffffff" : "#ffffffff"}
+                color="#ffffff"
               />
             ),
           }}
         />
 
         <Tab.Screen
-          name="Stats"
-          component={Stats}
+          name="TrainingPlan"
+          component={TrainingPlan}
           options={{
-            tabBarLabel: "Stats",
+            tabBarLabel: "Training Plan",
             tabBarIcon: ({ focused }) => (
               <Ionicons
-                name={focused ? "stats-chart" : "stats-chart-outline"}
+                name={focused ? "list" : "list-outline"}
                 size={26}
                 color={focused ? "#845EC2" : "#8E8E93"}
               />
@@ -102,13 +103,13 @@ const AppNavigator = () => {
         />
 
         <Tab.Screen
-          name="Settings"
-          component={Settings}
+          name="Activity"
+          component={Activity}
           options={{
-            tabBarLabel: "Settings",
+            tabBarLabel: "Activity",
             tabBarIcon: ({ focused }) => (
               <Ionicons
-                name={focused ? "settings" : "settings-outline"}
+                name={focused ? "pulse" : "pulse-outline"}
                 size={26}
                 color={focused ? "#845EC2" : "#8E8E93"}
               />
@@ -117,7 +118,7 @@ const AppNavigator = () => {
         />
       </Tab.Navigator>
 
-      {/* 🟣 Animated FAB */}
+      {/* 🟣 Floating Add Button */}
       <Animated.View
         style={[
           styles.fabContainer,
@@ -135,6 +136,7 @@ const AppNavigator = () => {
         </TouchableOpacity>
       </Animated.View>
 
+      {/* 🟢 Modal for Adding Athletes */}
       <AddAthlete visible={showModal} onClose={() => setShowModal(false)} />
     </>
   );
