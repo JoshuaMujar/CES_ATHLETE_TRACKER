@@ -497,26 +497,26 @@ const styles = StyleSheet.create({
     borderColor: "#E5E7EB",
     color: "#000000",
   },
-  filterRow: {
-    flex: 1,
+filterRow: {
     flexDirection: "row",
-    paddingHorizontal: 20,
+    paddingHorizontal: 16,
     marginBottom: 20,
-    paddingVertical: 10,
-    top: 10, 
+    paddingVertical: 5,
   },
   filterButton: {
-    backgroundColor: "#ffffffff",
-    paddingHorizontal: 20,
-    paddingVertical: 5,
-    borderRadius: 15,
-    marginRight: 12,
+    backgroundColor: "#FFFFFF",
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderRadius: 20,
+    marginRight: 10,
     borderWidth: 1,
     borderColor: "#E5E7EB",
-   
+    height: 36,
+    justifyContent: "center",
+    alignItems: "center",
   },
-  filterButtonActive:{
-    backgroundColor: "#845EC2",
+  filterButtonActive: {
+    backgroundColor: "#000000",
     borderColor: "#000000",
   },
   filterText: {
@@ -526,6 +526,7 @@ const styles = StyleSheet.create({
   },
   filterTextActive: {
     color: "#FFFFFF",
+
   },
   quickAccessRow: {
     flexDirection: "row",
