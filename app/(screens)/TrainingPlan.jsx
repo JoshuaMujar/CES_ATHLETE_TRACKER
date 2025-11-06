@@ -242,7 +242,7 @@ export default function TrainingPlan() {
         />
       </View>
 
-      {/* Category Filters */}
+      {/* FILTERs */}
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.filterRow}>
         {categories.map((category) => (
           <TouchableOpacity
@@ -266,7 +266,7 @@ export default function TrainingPlan() {
         ))}
       </ScrollView>
 
-      {/* Quick Access Cards - Only show if there are plans */}
+      {/* Quick Access Cards */}
       {plans.length > 0 && (
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.quickAccessRow}>
           {plans.filter(plan => plan.category === "Sprinting").length > 0 && (
@@ -498,6 +498,7 @@ const styles = StyleSheet.create({
     color: "#000000",
   },
   filterRow: {
+    flex: 1,
     flexDirection: "row",
     paddingHorizontal: 20,
     marginBottom: 20,
@@ -514,8 +515,8 @@ const styles = StyleSheet.create({
     borderColor: "#E5E7EB",
    
   },
-  filterButtonActive: {
-    backgroundColor: "#000000",
+  filterButtonActive:{
+    backgroundColor: "#845EC2",
     borderColor: "#000000",
   },
   filterText: {
