@@ -20,7 +20,7 @@ export default function TrainingPlan() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [editingPlan, setEditingPlan] = useState(null);
 
-  // Form states
+
   const [planName, setPlanName] = useState("");
   const [planCategory, setPlanCategory] = useState("Sprinting");
   const [planDescription, setPlanDescription] = useState("");
@@ -72,7 +72,7 @@ export default function TrainingPlan() {
 
   const handleSavePlan = async () => {
     if (!planName.trim()) {
-      Alert.alert("Error", "Please enter a plan name");
+      Alert.alert("Error", "Please enter a Training plan name");
       return;
     }
 

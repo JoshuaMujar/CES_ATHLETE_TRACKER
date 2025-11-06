@@ -3,6 +3,8 @@ import { View,Text,StyleSheet,TouchableOpacity,ScrollView,} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
 import AthleteInfo from "../(athleteTabs)/AthleteInfo";
+import Competition from "../(athleteTabs)/Competition";
+
 
 const Dashboard = () => {
   return (
@@ -34,7 +36,8 @@ const Dashboard = () => {
             <Text style={styles.cardLabel}>Fields</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.card} onPress={() => router.push("/(athleteTabs)/AthleteInfo")} >
+          <TouchableOpacity style={styles.card} onPress={() => router.push("/Competition")}>
+
             <Ionicons name="calendar-outline" size={28} color="#333" />
             <Text style={styles.count}>#</Text>
             <Text style={styles.cardLabel}>Days till Competition</Text>

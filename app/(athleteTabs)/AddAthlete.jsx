@@ -16,17 +16,17 @@ const AddAthlete = ({ visible, onClose }) => {
     PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onMoveShouldSetPanResponder: (_, gestureState) => {
-        // Only respond to downward drags
+     
         return gestureState.dy > 5;
       },
       onPanResponderMove: (_, gestureState) => {
-        // Only allow dragging down
+    
         if (gestureState.dy > 0) {
           translateY.setValue(gestureState.dy);
         }
       },
       onPanResponderRelease: (_, gestureState) => {
-        // If dragged down more than 100px, close the modal
+    
         if (gestureState.dy > 100) {
           Animated.timing(translateY, {
             toValue: height,
@@ -37,7 +37,7 @@ const AddAthlete = ({ visible, onClose }) => {
             onClose();
           });
         } else {
-          // Otherwise, spring back to original position
+       
           Animated.spring(translateY, {
             toValue: 0,
             useNativeDriver: true,
@@ -64,19 +64,19 @@ const AddAthlete = ({ visible, onClose }) => {
   };
 
   const handleSubmit = () => {
-    // Validate that at least one event is selected
+
     if (selectedEvents.length === 0) return;
     
-    // Handle form submission here
+
     console.log({ name, age, gender, selectedEvents });
     
-    // Clear form
+
     setName('');
     setAge('');
     setGender('');
     setSelectedEvents([]);
     
-    // Close modal with slide down animation
+   
     onClose();
   };
 

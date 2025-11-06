@@ -11,24 +11,24 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
 
   const handleSignIn = async () => {
-    router.replace("AppNavigator");
-    // if (!email || !password) {
-    //   Alert.alert("Error", "Please enter both email and password.");
-    //   return;
-    // }
+    //router.replace("AppNavigator");
+     if (!email || !password) {
+       Alert.alert("Error", "Please enter both email and password.");
+       return;
+     }
 
-    // try {
-    //   const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    //   const user = userCredential.user;
+     try {
+       const userCredential = await signInWithEmailAndPassword(auth, email, password);
+       const user = userCredential.user;
 
-    //   console.log("User signed in:", user.email);
-    //   Alert.alert("Welcome", `Signed in as ${user.email}`);
+       console.log("User signed in:", user.email);
+       Alert.alert("Welcome", `Signed in as ${user.email}`);
       
-    //   router.replace("AppNavigator");
-    // } catch (error) {
-    //   console.error("Login error:", error);
-    //   Alert.alert("Login Failed", error.message);
-    // }
+       router.replace("AppNavigator");
+     } catch (error) {
+       console.error("Login error:", error);
+       Alert.alert("Login Failed", error.message);
+   }
   };
 
   return (

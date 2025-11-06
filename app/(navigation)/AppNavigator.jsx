@@ -10,7 +10,8 @@ import Activity from "../(screens)/Activity";
 import TrainingPlan from "../(screens)/TrainingPlan";
 import Attendance from "../(screens)/AthleteCalendar";  
 import AddAthlete from "../(athleteTabs)/AddAthlete";
-
+import AthleteInfo from "../(athleteTabs)/AthleteInfo";
+import Competition from "../(athleteTabs)/Competition";
 
 
 
@@ -118,7 +119,6 @@ const AppNavigator = () => {
         />
       </Tab.Navigator>
 
-      {/* 🟣 Floating Add Button */}
       <Animated.View
         style={[
           styles.fabContainer,
@@ -136,7 +136,7 @@ const AppNavigator = () => {
         </TouchableOpacity>
       </Animated.View>
 
-      {/* 🟢 Modal for Adding Athletes */}
+      
       <AddAthlete visible={showModal} onClose={() => setShowModal(false)} />
     </>
   );

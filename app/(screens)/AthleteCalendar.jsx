@@ -135,7 +135,7 @@ const Attendance = () => {
         ))}
       </ScrollView>
 
-      {/* 🟣 Modal */}
+      {/* Modal */}
       <StatusModal
         visible={showModal}
         onClose={() => setShowModal(false)}
