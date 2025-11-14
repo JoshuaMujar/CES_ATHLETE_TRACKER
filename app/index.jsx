@@ -15,7 +15,7 @@ const Home = () => {
         {/* Top Section with Logo */}
         <View style={styles.topSection}>
           <Image source={CesLogo} style={styles.logo} contentFit="contain" />
-          <Text style={styles.appTitle}>CES Training</Text>
+          <Text style={styles.appTitle}>ATHLETICES</Text>
         </View>
 
         {/* Middle Section with Description */}
@@ -28,7 +28,7 @@ const Home = () => {
           </Text>
         </View>
 
-        {/* Bottom Section with Buttons */}
+        {/* Sign in buttons on landing page */}
         <View style={styles.bottomSection}>
           <TouchableOpacity 
             style={styles.signInBtn} 
@@ -38,13 +38,13 @@ const Home = () => {
             <Text style={styles.signInText}>Sign In</Text> 
           </TouchableOpacity>
           
-          <TouchableOpacity 
+          {/* <TouchableOpacity 
             style={styles.signUpBtn} 
             onPress={() => router.push("SignUp")}
             activeOpacity={0.8}
           > 
             <Text style={styles.signUpText}>Create Account</Text> 
-          </TouchableOpacity>
+          </TouchableOpacity> */}
           
           
         </View>
@@ -79,6 +79,8 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#050000',
     letterSpacing: 1,
+    marginTop: 20,
+  
   },
   middleSection: {
     flex: 2,
@@ -102,7 +104,7 @@ const styles = StyleSheet.create({
   },
   bottomSection: {
     flex: 2,
-    justifyContent: 'flex-end',
+    justifyContent: 'flex',
     paddingBottom: 50,
   },
   signInBtn: {

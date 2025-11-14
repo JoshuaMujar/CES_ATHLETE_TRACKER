@@ -5,7 +5,7 @@ import React from 'react'
 const Competition = () => {
   return (
     <View>
-      <Text>hotdog</Text>
+      <Text>Hello!</Text>
     </View>
   )
 }

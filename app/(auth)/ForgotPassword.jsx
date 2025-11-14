@@ -6,6 +6,7 @@ import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../../FireBaseConfig";
 import { LinearGradient } from 'expo-linear-gradient';
 
+
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
 

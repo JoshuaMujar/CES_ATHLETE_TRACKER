@@ -17,7 +17,7 @@ const Dashboard = () => {
         <View style={styles.header}>
           <View>
             <Text style={styles.greeting}>Good morning, </Text>
-            <Text style={styles.subtext}>Welcome to Athlete Tracker</Text>
+            <Text style={styles.subtext}>Welcome to ATHLETICES</Text>
           </View>
           <Ionicons name="notifications-outline" size={22} color="#000000ff" />
         </View>
@@ -26,31 +26,36 @@ const Dashboard = () => {
         <View style={styles.cardsContainer}>
           <TouchableOpacity style={styles.card} onPress={() => router.push("/(athleteTabs)/AthleteInfo")}> 
             <Ionicons name="people-outline" size={28} color="#333" />
-            <Text style={styles.count}>#</Text>
+            <Text style={styles.count}>99</Text>
             <Text style={styles.cardLabel}>Athletes</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.card}>
             <Ionicons name="trophy-outline" size={28} color="#333" />
-            <Text style={styles.count}>#</Text>
-            <Text style={styles.cardLabel}>Fields</Text>
+            <Text style={styles.count}>3</Text>
+            <Text style={styles.cardLabel}>Events</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.card} onPress={() => router.push("/Competition")}>
-
+          <TouchableOpacity style={styles.cardCompetition} onPress={() => router.push("/Competition")}>
             <Ionicons name="calendar-outline" size={28} color="#333" />
-            <Text style={styles.count}>#</Text>
-            <Text style={styles.cardLabel}>Days till Competition</Text>
+            <Text style={styles.count}>20</Text>
+            <Text style={styles.Competition}>Days till Competition</Text>
           </TouchableOpacity>
         </View>
 
         {/* Top Performers */}
         <Text style={styles.sectionTitle}>Top Performers</Text>
         <View style={styles.performersBox}>
-          <Text style={styles.placeholderText}>(Athlete cards go here)</Text>
+          <Text style={styles.placeholderText}>(Christian Bryan Garcia)</Text>
         </View>
         <View style={styles.performersBox}>
-          <Text style={styles.placeholderText}>(Athlete cards go here)</Text>
+          <Text style={styles.placeholderText}>(Seann Stephen Morales)</Text>
+        </View>
+          <View style={styles.performersBox}>
+          <Text style={styles.placeholderText}>(Joshua Ley Mujar)</Text>
+        </View>
+          <View style={styles.performersBox}>
+          <Text style={styles.placeholderText}>(Jords Denel Verecio)</Text>
         </View>
       </ScrollView>
 
@@ -100,6 +105,19 @@ const styles = StyleSheet.create({
     elevation: 2,
     alignItems: "flex-start",
   },
+  cardCompetition: {
+    backgroundColor: "#ffffffff",
+    width: "100%",
+    borderRadius: 16,
+    padding: 20,
+    marginBottom: 15,
+    shadowColor: "#000",
+    shadowOpacity: 0.08,
+    shadowRadius: 6, 
+    elevation: 2,
+    alignItems: "flex-start",
+  },
+
   count: {
     fontSize: 18,
     fontWeight: "700",
@@ -127,6 +145,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.05,
     shadowRadius: 5,
     elevation: 2,
+    padding: 25 ,
+
   },
   placeholderText: {
     color: "#aaa",

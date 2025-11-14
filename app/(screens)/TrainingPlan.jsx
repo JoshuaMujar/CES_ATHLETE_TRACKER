@@ -152,11 +152,11 @@ export default function TrainingPlan() {
   const getCategoryIcon = (category) => {
     switch (category) {
       case "Sprinting":
-        return " ";
+        return "🏃";
       case "Jumping":
-        return " ";
+        return "🦘";
       case "Throwing":
-        return " ";
+        return " ⚾";
       default:
         return " ";
     }
@@ -472,6 +472,7 @@ export default function TrainingPlan() {
 }
 
 const styles = StyleSheet.create({
+  // Container & Page
   container: {
     flex: 1,
     backgroundColor: "#FFFFFF",
@@ -484,6 +485,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     color: "#000000",
   },
+
+  // Search
   searchContainer: {
     paddingHorizontal: 16,
     marginBottom: 16,
@@ -497,7 +500,9 @@ const styles = StyleSheet.create({
     borderColor: "#E5E7EB",
     color: "#000000",
   },
-filterRow: {
+
+  // Filters
+  filterRow: {
     flexDirection: "row",
     paddingHorizontal: 16,
     marginBottom: 20,
@@ -526,8 +531,9 @@ filterRow: {
   },
   filterTextActive: {
     color: "#FFFFFF",
-
   },
+
+  // Quick Access Cards
   quickAccessRow: {
     flexDirection: "row",
     paddingHorizontal: 16,
@@ -541,28 +547,14 @@ filterRow: {
     marginRight: 12,
     justifyContent: "space-between",
   },
-  quickAccessPink: {
-    backgroundColor: "#FFB6D9",
-  },
-  quickAccessPurple: {
-    backgroundColor: "#C4B5FD",
-  },
-  quickAccessBeige: {
-    backgroundColor: "#D4C4A8",
-  },
-  quickAccessIcon: {
-    fontSize: 20,
-  },
-  quickAccessText: {
-    fontSize: 11,
-    fontWeight: "600",
-    color: "#000000",
-  },
-  quickAccessCount: {
-    fontSize: 10,
-    color: "#000000",
-    opacity: 0.7,
-  },
+  quickAccessPink: { backgroundColor: "#FFB6D9" },
+  quickAccessPurple: { backgroundColor: "#C4B5FD" },
+  quickAccessBeige: { backgroundColor: "#D4C4A8" },
+  quickAccessIcon: { fontSize: 20 },
+  quickAccessText: { fontSize: 11, fontWeight: "600", color: "#000000" },
+  quickAccessCount: { fontSize: 10, color: "#000000", opacity: 0.7 },
+
+  // Plan Card
   listContent: {
     paddingHorizontal: 16,
     paddingBottom: 100,
@@ -588,21 +580,16 @@ filterRow: {
     alignItems: "center",
     marginRight: 12,
   },
-  iconText: {
-    fontSize: 22,
-  },
-  planTitle: {
-    fontSize: 24,
-    fontWeight: "700",
-    flex: 1,
-    color: "#000000",
-  },
+  iconText: { fontSize: 22 },
+  planTitle: { fontSize: 24, fontWeight: "700", flex: 1, color: "#000000" },
   planSubtitle: {
     fontSize: 13,
     color: "#6B7280",
     marginBottom: 14,
     lineHeight: 18,
   },
+
+  // Plan Meta
   planMeta: {
     flexDirection: "row",
     alignItems: "center",
@@ -610,34 +597,15 @@ filterRow: {
     gap: 12,
     paddingBottom: 14,
   },
-  metaItem: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  metaIcon: {
-    fontSize: 14,
-    marginRight: 4,
-  },
-  metaText: {
-    fontSize: 12,
-    color: "#6B7280",
-  },
-  actionButton: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  actionIcon: {
-    fontSize: 14,
-    marginRight: 2,
-  },
-  actionText: {
-    fontSize: 12,
-    color: "#6B7280",
-  },
-  deleteText: {
-    fontSize: 12,
-    color: "#EF4444",
-  },
+  metaItem: { flexDirection: "row", alignItems: "center" },
+  metaIcon: { fontSize: 14, marginRight: 4 },
+  metaText: { fontSize: 12, color: "#6B7280" },
+  actionButton: { flexDirection: "row", alignItems: "center" },
+  actionIcon: { fontSize: 14, marginRight: 2 },
+  actionText: { fontSize: 12, color: "#6B7280" },
+  deleteText: { fontSize: 12, color: "#EF4444" },
+
+  // Exercise List
   exerciseList: {
     borderTopWidth: 1,
     borderTopColor: "#F3F4F6",
@@ -649,40 +617,23 @@ filterRow: {
     justifyContent: "space-between",
     marginBottom: 8,
   },
-  exerciseName: {
-    fontSize: 13,
-    color: "#374151",
-    flex: 1,
-  },
-  exerciseDetail: {
-    fontSize: 13,
-    color: "#6B7280",
-  },
-  moreExercises: {
-    fontSize: 12,
-    color: "#9CA3AF",
-    marginTop: 4,
-    fontStyle: "italic",
-  },
-  emptyContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    paddingVertical: 60,
-  },
-  emptyText: {
-    textAlign: "center",
-    color: "#9CA3AF",
-    fontSize: 14,
-  },
+  exerciseName: { fontSize: 13, color: "#374151", flex: 1 },
+  exerciseDetail: { fontSize: 13, color: "#6B7280" },
+  moreExercises: { fontSize: 12, color: "#9CA3AF", marginTop: 4, fontStyle: "italic" },
+
+  // Empty State
+  emptyContainer: { flex: 1, justifyContent: "center", alignItems: "center", paddingVertical: 60 },
+  emptyText: { textAlign: "center", color: "#9CA3AF", fontSize: 14 },
+
+  // Floating Button
   fab: {
     position: "absolute",
     bottom: 100,
-    right: 40,
+    right: 23,
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: "#845EC2",
+    backgroundColor: "#007635",
     justifyContent: "center",
     alignItems: "center",
     elevation: 8,
@@ -691,51 +642,18 @@ filterRow: {
     shadowOpacity: 0.3,
     shadowRadius: 8,
   },
-  fabText: {
-    fontSize: 28,
-    color: "#FFFFFF",
-    fontWeight: "300",
-  },
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: "rgba(0,0,0,0.5)",
-    justifyContent: "flex-end",
-  },
-  modalContent: {
-    backgroundColor: "#FFFFFF",
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
-    maxHeight: "90%",
-    padding: 24,
-  },
-  modalHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 8,
-  },
-  modalTitle: {
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#000000",
-  },
-  closeButton: {
-    fontSize: 28,
-    color: "#6B7280",
-    fontWeight: "300",
-  },
-  modalSubtitle: {
-    fontSize: 13,
-    color: "#6B7280",
-    marginBottom: 24,
-  },
-  label: {
-    fontSize: 14,
-    fontWeight: "600",
-    marginBottom: 8,
-    marginTop: 16,
-    color: "#000000",
-  },
+  fabText: { fontSize: 28, color: "#FFFFFF", fontWeight: "300" },
+
+  // Modal
+  modalOverlay: { flex: 1, backgroundColor: "rgba(0,0,0,0.5)", justifyContent: "flex-end" },
+  modalContent: { backgroundColor: "#FFFFFF", borderTopLeftRadius: 24, borderTopRightRadius: 24, maxHeight: "90%", padding: 24 },
+  modalHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
+  modalTitle: { fontSize: 20, fontWeight: "700", color: "#000000" },
+  closeButton: { fontSize: 28, color: "#6B7280", fontWeight: "300" },
+  modalSubtitle: { fontSize: 13, color: "#6B7280", marginBottom: 24 },
+
+  // Form Inputs
+  label: { fontSize: 14, fontWeight: "600", marginBottom: 8, marginTop: 16, color: "#000000" },
   input: {
     backgroundColor: "#F9FAFB",
     borderRadius: 8,
@@ -746,15 +664,10 @@ filterRow: {
     borderColor: "#E5E7EB",
     color: "#000000",
   },
-  textArea: {
-    height: 90,
-    textAlignVertical: "top",
-  },
-  categoryRow: {
-    flexDirection: "row",
-    gap: 10,
-    marginBottom: 12,
-  },
+  textArea: { height: 90, textAlignVertical: "top" },
+
+  // Category Buttons
+  categoryRow: { flexDirection: "row", gap: 10, marginBottom: 12 },
   categoryButton: {
     flex: 1,
     backgroundColor: "#F9FAFB",
@@ -764,99 +677,23 @@ filterRow: {
     borderWidth: 1,
     borderColor: "#E5E7EB",
   },
-  categoryButtonActive: {
-    backgroundColor: "#000000",
-    borderColor: "#000000",
-  },
-  categoryButtonText: {
-    fontSize: 13,
-    color: "#6B7280",
-    fontWeight: "500",
-  },
-  categoryButtonTextActive: {
-    color: "#FFFFFF",
-  },
-  exerciseHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginTop: 16,
-    marginBottom: 12,
-  },
-  addExerciseButton: {
-    backgroundColor: "#F9FAFB",
-    paddingHorizontal: 14,
-    paddingVertical: 8,
-    borderRadius: 6,
-    borderWidth: 1,
-    borderColor: "#E5E7EB",
-  },
-  addExerciseText: {
-    fontSize: 12,
-    color: "#6B7280",
-    fontWeight: "500",
-  },
-  noExercisesText: {
-    fontSize: 13,
-    color: "#9CA3AF",
-    fontStyle: "italic",
-    textAlign: "center",
-    paddingVertical: 24,
-  },
-  exerciseCard: {
-    backgroundColor: "#F9FAFB",
-    borderRadius: 10,
-    padding: 14,
-    marginBottom: 12,
-    borderWidth: 1,
-    borderColor: "#E5E7EB",
-  },
-  exerciseCardHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 10,
-  },
-  exerciseNameInput: {
-    flex: 1,
-    backgroundColor: "#FFFFFF",
-    borderRadius: 6,
-    padding: 12,
-    fontSize: 14,
-    borderWidth: 1,
-    borderColor: "#E5E7EB",
-    color: "#000000",
-  },
-  removeExercise: {
-    fontSize: 18,
-    marginLeft: 10,
-  },
-  exerciseDetailsRow: {
-    flexDirection: "row",
-    gap: 8,
-    marginBottom: 8,
-  },
-  smallInput: {
-    flex: 1,
-    backgroundColor: "#FFFFFF",
-    borderRadius: 6,
-    padding: 12,
-    fontSize: 14,
-    borderWidth: 1,
-    borderColor: "#E5E7EB",
-    color: "#000000",
-  },
-  saveButton: {
-    backgroundColor: "#030200ff",
-    paddingVertical: 16,
-    borderRadius: 10,
-    alignItems: "center",
-    marginTop: 24,
-    marginBottom: 24,
-  },
-  saveButtonText: {
-    color: "#FFFFFF",
-    fontSize: 18,
-    fontWeight: "600",
-  },
+  categoryButtonActive: { backgroundColor: "#000000", borderColor: "#000000" },
+  categoryButtonText: { fontSize: 13, color: "#6B7280", fontWeight: "500" },
+  categoryButtonTextActive: { color: "#FFFFFF" },
+
+  // Exercises Form
+  exerciseHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 16, marginBottom: 12 },
+  addExerciseButton: { backgroundColor: "#F9FAFB", paddingHorizontal: 14, paddingVertical: 8, borderRadius: 6, borderWidth: 1, borderColor: "#E5E7EB" },
+  addExerciseText: { fontSize: 12, color: "#6B7280", fontWeight: "500" },
+  noExercisesText: { fontSize: 13, color: "#9CA3AF", fontStyle: "italic", textAlign: "center", paddingVertical: 24 },
+  exerciseCard: { backgroundColor: "#F9FAFB", borderRadius: 10, padding: 14, marginBottom: 12, borderWidth: 1, borderColor: "#E5E7EB" },
+  exerciseCardHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 10 },
+  exerciseNameInput: { flex: 1, backgroundColor: "#FFFFFF", borderRadius: 6, padding: 12, fontSize: 14, borderWidth: 1, borderColor: "#E5E7EB", color: "#000000" },
+  removeExercise: { fontSize: 18, marginLeft: 10 },
+  exerciseDetailsRow: { flexDirection: "row", gap: 8, marginBottom: 8 },
+  smallInput: { flex: 1, backgroundColor: "#FFFFFF", borderRadius: 6, padding: 12, fontSize: 14, borderWidth: 1, borderColor: "#E5E7EB", color: "#000000" },
+
+  // Save Button
+  saveButton: { backgroundColor: "#030200ff", paddingVertical: 16, borderRadius: 10, alignItems: "center", marginTop: 24, marginBottom: 24 },
+  saveButtonText: { color: "#FFFFFF", fontSize: 18, fontWeight: "600" },
 });

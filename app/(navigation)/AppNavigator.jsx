@@ -50,7 +50,7 @@ const AppNavigator = () => {
               <Ionicons
                 name={focused ? "home" : "home-outline"}
                 size={26}
-                color={focused ? "#845EC2" : "#8E8E93"}
+                color={focused ? "#007635" : "#8E8E93"}
               />
             ),
           }}
@@ -65,7 +65,7 @@ const AppNavigator = () => {
               <Ionicons
                 name={focused ? "calendar" : "calendar-outline"}
                 size={26}
-                color={focused ? "#845EC2" : "#8E8E93"}
+                color={focused ? "#007635" : "#8E8E93"}
               />
             ),
           }}
@@ -95,7 +95,7 @@ const AppNavigator = () => {
               <Ionicons
                 name={focused ? "list" : "list-outline"}
                 size={26}
-                color={focused ? "#845EC2" : "#8E8E93"}
+                color={focused ? "#007635" : "#8E8E93"}
               />
             ),
           }}
@@ -110,7 +110,7 @@ const AppNavigator = () => {
               <Ionicons
                 name={focused ? "pulse" : "pulse-outline"}
                 size={26}
-                color={focused ? "#845EC2" : "#8E8E93"}
+                color={focused ? "#007635" : "#8E8E93"}
               />
             ),
           }}
@@ -152,6 +152,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 5,
     position: "absolute",
+    paddingBottom: 10,
+    paddingTop: 10,
   },
   fabContainer: {
     position: "absolute",
@@ -159,7 +161,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   fabButton: {
-    backgroundColor: "#845EC2",
+    backgroundColor: "#007635",
     width: 65,
     height: 65,
     borderRadius: 35,

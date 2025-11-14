@@ -19,10 +19,10 @@ const Attendance = () => {
     { id: 1, name: "Verecio, Jords Denel D.V.", status: "Present" },
     { id: 2, name: "Mujar, Joshua Ley G.", status: "Late" },
     { id: 3, name: "Garcia, Christian Bryan S.", status: "Excused" },
-    { id: 4, name: "Morales, Seann Stephen ?", status: "Absent" },
+    { id: 4, name: "Morales, Seann Stephen P.", status: "Absent" },
   ]);
 
-  const dates = ["Oct. 24", "Oct. 25", "Oct. 26", "Oct. 27", "Oct. 28"];
+  const dates = ["Oct. 24", "Oct. 25", "Oct. 26", "Oct. 27", "Oct. 28", "Oct. 29", "Oct. 30", "Oct. 31"];
 
   const getStatusColor = (status) => {
     switch (status) {
@@ -89,16 +89,16 @@ const Attendance = () => {
         {/* Status Legend */}
         <View style={styles.legendRow}>
           <View style={[styles.legendBox, { backgroundColor: "#D8F3DC" }]}>
-            <Text style={styles.legendText}># Present</Text>
+            <Text style={styles.legendText}> Present</Text>
           </View>
           <View style={[styles.legendBox, { backgroundColor: "#FECACA" }]}>
-            <Text style={styles.legendText}># Absent</Text>
+            <Text style={styles.legendText}> Absent</Text>
           </View>
           <View style={[styles.legendBox, { backgroundColor: "#FEF3C7" }]}>
-            <Text style={styles.legendText}># Late</Text>
+            <Text style={styles.legendText}> Late</Text>
           </View>
           <View style={[styles.legendBox, { backgroundColor: "#DBEAFE" }]}>
-            <Text style={styles.legendText}># Excused</Text>
+            <Text style={styles.legendText}> Excused </Text>
           </View>
         </View>
 

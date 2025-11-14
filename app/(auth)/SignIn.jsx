@@ -86,12 +86,12 @@ const SignIn = () => {
             <Text style={styles.signInText}>Sign In</Text>
           </TouchableOpacity>
 
-          <View style={styles.footer}>
+          {/* <View style={styles.footer}>
             <Text style={styles.footerText}>Don't have an account? </Text>
             <TouchableOpacity onPress={() => router.push("SignUp")}>
               <Text style={styles.linkText}>Sign Up</Text>
             </TouchableOpacity>
-          </View>
+          </View> */}
         </View>
 
         {/* Bottom Spacer */}
